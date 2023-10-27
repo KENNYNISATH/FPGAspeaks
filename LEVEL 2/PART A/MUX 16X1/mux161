@@ -1,0 +1,12 @@
+module mux161(
+  input [3:0]s,
+  input [15:0]a,
+  output y
+  );
+wire [3:0]x;
+mux41 m411(s[1:0],a[3:0],x[0]);
+mux41 m412(s[1:0],a[7:4],x[1]);
+mux41 m413(s[1:0],a[11:8],x[2]);
+mux41 m414(s[1:0],a[15:12],x[3]);
+mux41 m415(s[3:2],x[3:0],y);
+endmodule
