@@ -1,1 +1,23 @@
+module dff_tb;
+reg d,clk;
+wire q,qbar;
+dff uut(d,clk,q,qbar);
+initial
+begin
+clk=0;
+forever #10 clk=~clk;
+end
+initial
+begin
+d=1;#20
+d=0;#20
+d=1;#20
+d=0;#20
+d=1;#20
+d=0;#20
+d=1;#20
+d=0;#20
+$finish;
+end
+endmodule
 
