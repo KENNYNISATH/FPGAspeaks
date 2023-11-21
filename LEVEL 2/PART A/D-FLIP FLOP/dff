@@ -1,1 +1,10 @@
+module dff(d,clk,q,qbar);
+input t,clk;
+output reg q,qbar;
+always@*(posedge clk)
+begin
+q=d;
+qbar-~q;
+end
+endmodule
 
