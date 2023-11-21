@@ -1,1 +1,10 @@
-
+module t_ff(q,qbar,t,clk);
+input t,clk;
+output reg q,qbar;
+initial q=0;
+always@(posedge clk)
+begin
+q<=(~t&q)|(t&~q);
+qbar<=~q;
+end 
+endmodule 
