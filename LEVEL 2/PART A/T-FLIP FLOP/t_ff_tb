@@ -1,1 +1,21 @@
-
+module t_ff_tb;
+reg t,clk;
+wire q,qbar;
+t_ff uut (q,qbar,t,clk);
+initial
+begin
+clk=0;
+forever #10 clk=~clk;
+end
+intial
+begin
+clk=1;
+t=0; #20
+t=1; #20
+t=0; #20
+t=1; #20
+t=0; #20
+t=1; #20
+$finish;
+end
+endmodule
