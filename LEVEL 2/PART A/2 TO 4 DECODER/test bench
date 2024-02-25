@@ -1,1 +1,18 @@
+module decoder_2_4_test;
+reg a,b;
+wire w,x,y,z;
 
+decoder_2_4 decoder_2_4_test(a,b,w,x,y,z);
+initial
+
+begin
+#000 a=0; b=0;
+#100 a=0; b=1;
+#100 a=1; b=0;
+#100 a=1; b=1;
+end
+initial
+begin
+$monitor($time,"a=%b,b=%b,w=%b,x=%b,y=%b,z=%b",a,b,w,x,y,z);
+end
+endmodule
