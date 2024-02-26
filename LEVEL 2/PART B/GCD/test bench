@@ -1,0 +1,19 @@
+module gcd_calc_tb;
+
+reg [31:0] a;
+reg [31:0] b;
+wire [31:0] gcd;
+
+gcd_calc dut (a, b, gcd);
+
+initial begin
+  a = 48;
+  b = 18;
+  #10 $display("GCD of %d and %d is %d", a, b, gcd);
+
+  a = 123456789;
+  b = 987654321;
+  #10 $display("GCD of %d and %d is %d", a, b, gcd);
+end
+
+endmodule
