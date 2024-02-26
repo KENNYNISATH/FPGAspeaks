@@ -1,0 +1,15 @@
+module gcd_calc(input wire [31:0] a, input wire [31:0] b, output wire [31:0] gcd);
+
+reg [31:0] temp;
+
+always @(*) begin
+  temp = a;
+  while (b != 0) begin
+    temp = b;
+    b = a % b;
+    a = temp;
+  end
+  gcd = temp;
+end
+
+endmodule
