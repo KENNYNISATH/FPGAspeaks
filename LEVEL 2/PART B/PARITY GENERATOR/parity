@@ -1,0 +1,9 @@
+module parity(
+
+input x,y,z,
+
+output result);
+
+xor (result,x,y,z);  // SIMPLE XOR OPERATION : Gate Level Modeling
+
+endmodule
